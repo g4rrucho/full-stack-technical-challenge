@@ -297,6 +297,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@openrouter/sdk@npm:^0.2.9":
+  version: 0.2.9
+  resolution: "@openrouter/sdk@npm:0.2.9"
+  dependencies:
+    zod: "npm:^3.25.0 || ^4.0.0"
+  checksum: 10c0/23957b2981930ffa8c34fc286d1f0143393a2943614569d286f7c4a29ca37f74a7fdc70c48f30941f0220649ff3d7b49e116a860118016555bc0482ab424cb89
+  languageName: node
+  linkType: hard
+
 "@pinojs/redact@npm:^0.4.0":
   version: 0.4.0
   resolution: "@pinojs/redact@npm:0.4.0"
@@ -393,6 +402,7 @@ __metadata:
   resolution: "backend@workspace:."
   dependencies:
     "@fastify/cors": "npm:^11.1.0"
+    "@openrouter/sdk": "npm:^0.2.9"
     "@types/node": "npm:^24.10.1"
     "@types/pg": "npm:^8.15.6"
     dotenv: "npm:^17.2.3"
@@ -1483,5 +1493,12 @@ __metadata:
   version: 5.0.0
   resolution: "yallist@npm:5.0.0"
   checksum: 10c0/a499c81ce6d4a1d260d4ea0f6d49ab4da09681e32c3f0472dee16667ed69d01dae63a3b81745a24bd78476ec4fcf856114cb4896ace738e01da34b2c42235416
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.25.0 || ^4.0.0":
+  version: 4.1.13
+  resolution: "zod@npm:4.1.13"
+  checksum: 10c0/d7e74e82dba81a91ffc3239cd85bc034abe193a28f7087a94ab258a3e48e9a7ca4141920cac979a0d781495b48fc547777394149f26be04c3dc642f58bbc3941
   languageName: node
   linkType: hard
