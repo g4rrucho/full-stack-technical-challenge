@@ -2,9 +2,10 @@ import dotenv from "dotenv";
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 
-import { initDatabase } from "./db/client";
-import { articleRoutes } from "@/routes/articles";
+import { initDatabase } from "@/db/client";
+import { seedDatabaseIfEmpty } from "@/db/seed";
 import { startArticleScheduler } from "@/services/articleJob";
+import { articleRoutes } from "@/routes/articles";
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ const fastify = Fastify({
 async function main() {
   try {
     await initDatabase();
+    await seedDatabaseIfEmpty();
     await startArticleScheduler();
 
     await fastify.register(cors, { origin: true });
