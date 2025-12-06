@@ -1,8 +1,11 @@
-FROM node:22-21-alpine
+FROM node:22-alpine
+
+RUN corepack enable
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json yarn.lock .yarnrc.yml ./
+COPY .yarn .yarn
 
 RUN yarn install --frozen-lockfile
 
