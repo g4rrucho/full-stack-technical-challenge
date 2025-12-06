@@ -6,7 +6,7 @@ import ArticlesDetailsPage from "@/pages/articleDetailsPage";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/articles" replace />} />{" "}
+      <Route path="/" element={<Navigate to="/articles" replace />} />
       <Route path="/articles" Component={ArticlesPage} />
       <Route path="/articles/:id" Component={ArticlesDetailsPage} />
     </Routes>
