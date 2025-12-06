@@ -4,6 +4,7 @@ import cors from "@fastify/cors";
 
 import { initDatabase } from "./db/client";
 import { articleRoutes } from "@/routes/articles";
+import { startArticleScheduler } from "@/services/articleJob";
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ const fastify = Fastify({
 async function main() {
   try {
     await initDatabase();
+    await startArticleScheduler();
 
     await fastify.register(cors, { origin: true });
     await fastify.register(articleRoutes, { prefix: "/api" });
