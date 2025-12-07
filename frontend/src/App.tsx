@@ -1,15 +1,19 @@
 import { Navigate, Route, Routes } from "react-router";
 
 import ArticlesPage from "@/pages/articlesPage";
-import ArticlesDetailsPage from "@/pages/articleDetailsPage";
+import ArticleDetailsPage from "@/pages/articleDetailsPage";
+import Header from "@/components/blog-ui/Header";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/articles" replace />} />
-      <Route path="/articles" Component={ArticlesPage} />
-      <Route path="/articles/:id" Component={ArticlesDetailsPage} />
-    </Routes>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Navigate to="/articles" replace />} />
+        <Route path="/articles" Component={ArticlesPage} />
+        <Route path="/articles/:id" Component={ArticleDetailsPage} />
+      </Routes>
+    </>
   );
 }
 
