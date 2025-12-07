@@ -14,9 +14,7 @@ phases:
     commands:
       - echo Building the Docker images...
       - docker build -t $REPOSITORY_URI_BACKEND:latest -t $REPOSITORY_URI_BACKEND:$IMAGE_TAG
-./backend
       - docker build -t $REPOSITORY_URI_FRONTEND:latest -t $REPOSITORY_URI_FRONTEND:$IMAGE_TAG
-./frontend
 
   post_build:
     commands:
