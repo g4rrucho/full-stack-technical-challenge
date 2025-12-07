@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router";
 
-import ArticlesPage from "@/pages/articlesPage";
-import ArticleDetailsPage from "@/pages/articleDetailsPage";
+import ArticlesPage from "@/pages/ArticlesPage";
+import ArticleDetailsPage from "@/pages/ArticleDetailsPage";
 import Header from "@/components/blog-ui/Header";
 
 function App() {
