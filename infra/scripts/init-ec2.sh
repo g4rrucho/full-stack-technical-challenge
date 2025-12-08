@@ -8,6 +8,10 @@ echo "### Skynet is being initialized on this EC2 instance ###"
 echo "Updating system packages"
 sudo dnf update -y
 
+# Install Git
+echo "Installing Git"
+sudo dnf install -y git
+
 # Install Docker
 echo "Installing Docker"
 sudo dnf install -y docker
