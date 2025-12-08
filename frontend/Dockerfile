@@ -1,4 +1,4 @@
-FROM node:22-alpine AS builder
+FROM public.ecr.aws/docker/library/node:22-alpine AS builder
 
 RUN corepack enable
 
@@ -13,7 +13,7 @@ COPY . .
 RUN yarn build
 
 # Production stage
-FROM nginx:alpine
+FROM public.ecr.aws/docker/library/nginx:alpine
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 
