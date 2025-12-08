@@ -20,11 +20,11 @@ docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/blog-frontend:late
 
 # Stop and remove old containers
 echo "Stopping old containers"
-docker-compose -f infra/docker-compose.prod.yml down
+docker compose -f infra/docker-compose.prod.yml down
 
 # Start new containers
 echo "Starting new containers"
-docker-compose -f infra/docker-compose.prod.yml up -d
+docker compose -f infra/docker-compose.prod.yml up -d
 
 echo "### Deployment Complete ###"
-docker-compose -f infra/docker-compose.prod.yml ps
+docker compose -f infra/docker-compose.prod.yml ps

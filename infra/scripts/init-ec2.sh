@@ -15,6 +15,11 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker ec2-user
 
+# Install Docker compose
+sudo mkdir -p /usr/libexec/docker/cli-plugins/
+sudo curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m) -o /usr/libexec/docker/cli-plugins/docker-compose
+sudo chmod +x /usr/libexec/docker/cli-plugins/docker-compose
+
 # Install AWS CLI
 echo "Installing/updating AWS CLI"
 if ! command -v aws &> /dev/null; then

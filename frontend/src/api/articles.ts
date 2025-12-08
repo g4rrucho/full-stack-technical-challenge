@@ -1,7 +1,7 @@
 import type { ArticleDto } from "@/api/types/article";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 export const articlesApi = {
   getAll: async (): Promise<ArticleDto[]> => {
