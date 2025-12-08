@@ -27,8 +27,8 @@ const ArticlesPage = () => {
     );
 
   return (
-    <div className="container mx-auto py-8 px-4 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Articles</h1>
+    <div className="container mx-auto md:py-8 py-4 px-4 max-w-4xl">
+      <h1 className="text-4xl font-bold md:mb-8 mb-4">Articles</h1>
       <div className="space-y-4">
         {articles?.map((article) => (
           <ArticleCard

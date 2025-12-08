@@ -27,11 +27,11 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
       onClick={() => onClick(article.id)}
     >
       <CardHeader>
-        <CardTitle>{article.title}</CardTitle>
+        <CardTitle className="md:text-xl">{article.title}</CardTitle>
         <CardDescription>{date}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="line-clamp-3 text-muted-foreground">{article.content}</p>
+        <p className="line-clamp-3">{article.content}</p>
       </CardContent>
     </Card>
   );
