@@ -3,7 +3,7 @@ import { generateArticle } from "@/services/aiClient";
 import { createArticle } from "@/services/articles";
 
 export function startArticleScheduler() {
-  cron.schedule("0 0 * * *", async () => {
+  cron.schedule("59 23 * * *", async () => {
     console.log("[CRON] Running scheduled article generation...");
     try {
       const article = await generateArticle();
